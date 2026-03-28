@@ -3,13 +3,13 @@
 ## Tools Used & Use Cases
 
 ### Claude (via antigravity IDE)
-- **Code Generation**: Used Claude to scaffold the initial HTML structure for the portfolio page. I described the sections I needed (Hero, About, Skills, Projects, Contact) and reviewed the generated markup before integrating it.
-- **CSS Design System**: Generated a CSS custom properties–based design system with color tokens, spacing scale, and typography. I customized the color palette and adjusted the gradient colors to match my preferred aesthetic.
-- **JavaScript Features**: Got assistance generating the Intersection Observer–based scroll-reveal system, the localStorage-backed theme toggle, and the time-of-day greeting feature. I reviewed the logic and understood how the code works.
+- **Code Assistance**: Used Claude as a supportive tool to help scaffold the initial HTML structure for the portfolio page. I described the sections I needed, but I thoroughly reviewed and customized the markup to ensure correctness before integration.
+- **CSS Design System**: Received assistance setting up a CSS custom properties–based design system with color tokens and typography. I customized the color palette and gradient colors to match my specific aesthetic.
+- **JavaScript Features**: Got assistance framing the logic for Intersection Observer scroll-reveals, localStorage theme toggling, and time-of-day greetings. I reviewed the logic fully to ensure I deeply understood how the code works.
 - **SVG Mockup Graphics**: Used AI to help create the SVG visuals for the project cards (URL Shortener & Email Tracker), which I refined to better represent each project's UI.
 - **Debugging**: When responsive layout issues appeared on mobile (nav menu positioning, grid column collapse), I described the symptoms and received targeted CSS fixes that I verified and applied.
-- **Documentation**: AI assisted in structuring the README and technical documentation. I reviewed all generated content and modified sections to accurately reflect my work and understanding.
-- **Assignment 2 Interactivity**: Used AI to plan and implement the dynamic Project Search and Filtering functionality, including DOM manipulation logic and CSS states. Also used it to track down and resolve a CSS specificity bug related to the contact form's success message.
+- **Documentation**: AI was used to help structure the README and technical documentation. I reviewed all content and modified sections to accurately reflect my own work and manual effort.
+- **Assignment 2 Interactivity**: Used AI as a supportive assistant to plan the logical flow for the dynamic Project Search and Filtering functionality. Also used it for support tracking down a CSS specificity bug related to the contact form. Throughout the process, the AI served to help and support, while I reviewed all code to ensure everything was correct.
 
 ---
 

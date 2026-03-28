@@ -178,46 +178,51 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 10. PROJECT SEARCH & FILTER
+    // Get the search input box and buttons from the HTML
     const searchInput = document.getElementById('project-search');
     const filterBtns = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-card');
 
+    // Make sure the elements exist on the page before running the code
     if (searchInput && filterBtns.length > 0 && projectCards.length > 0) {
+        
+        // This function decides which project cards should be hidden or shown
         const filterProjects = () => {
-            const searchTerm = searchInput.value.toLowerCase().trim();
-            const activeFilterBtn = document.querySelector('.filter-btn.active');
-            const activeCategory = activeFilterBtn ? activeFilterBtn.dataset.filter : 'all';
+            const searchTerm = searchInput.value.toLowerCase().trim(); // Get the typed text
+            const activeFilterBtn = document.querySelector('.filter-btn.active'); // Find the clicked button
+            const activeCategory = activeFilterBtn ? activeFilterBtn.dataset.filter : 'all'; // Get its category (like 'python')
 
+            // Loop through every single project card
             projectCards.forEach(card => {
                 const titleElement = card.querySelector('.project-card__title');
-                const title = titleElement ? titleElement.textContent.toLowerCase() : '';
-                const categories = card.dataset.category ? card.dataset.category.split(' ') : [];
+                const title = titleElement ? titleElement.textContent.toLowerCase() : ''; // Get the project's title
+                const categories = card.dataset.category ? card.dataset.category.split(' ') : []; // Get the project's hidden tags
 
+                // Check if the card matches our search text and our active button tag
                 const matchesSearch = title.includes(searchTerm);
                 const matchesCategory = activeCategory === 'all' || categories.includes(activeCategory);
 
+                // If it matches both, show the card. Otherwise, hide it.
                 if (matchesSearch && matchesCategory) {
-                    card.classList.remove('project-hidden');
-                    // Retrigger reveal animation if not already visible
+                    card.classList.remove('project-hidden'); // Show card
                     if (!card.classList.contains('visible')) {
-                        card.classList.add('visible');
+                        card.classList.add('visible'); // Trigger animation if needed
                     }
                 } else {
-                    card.classList.add('project-hidden');
+                    card.classList.add('project-hidden'); // Hide card
                 }
             });
         };
 
+        // Run our function every time the user types a letter
         searchInput.addEventListener('input', filterProjects);
 
+        // Run our function every time the user clicks a filter button
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                // Remove active class from all buttons
-                filterBtns.forEach(b => b.classList.remove('active'));
-                // Add active class to the clicked button
-                btn.classList.add('active');
-                // Trigger filter
-                filterProjects();
+                filterBtns.forEach(b => b.classList.remove('active')); // Reset all buttons
+                btn.classList.add('active'); // Highlight the clicked button
+                filterProjects(); // Update the projects on screen
             });
         });
     }

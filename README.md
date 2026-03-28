@@ -2,8 +2,6 @@
 
 A responsive, modern personal portfolio web application built with **HTML5**, **CSS3**, and **vanilla JavaScript** as part of SWE363 (Web Engineering) Assignment 2 at KFUPM.
 
-![Portfolio Preview](assets/images/preview.png)
-
 ---
 
 ## 🚀 Features
@@ -16,7 +14,7 @@ A responsive, modern personal portfolio web application built with **HTML5**, **
 - **Contact Form Validation** — Client-side validation with real-time error feedback
 - **Floating Particles** — Dynamic animated particles in the hero section
 - **Active Nav Highlighting** — Automatically highlights the current section in the navbar
-- **Dynamic Project Filtering** — Search projects by title and filter by tags (Python, Web Apps, Analytics)
+- **Dynamic Project Filtering** — Search projects by title and filter by tags (Python, Web Apps, Analytics, ...)
 
 ---
 
@@ -82,12 +80,12 @@ SWE363 HW1/
 
 ## 🤖 AI Usage Summary
 
-AI-assisted development tools (Claude/antigravity) were used during this project for:
+AI tools (Claude/antigravity) were used strictly to support and assist development. Everything was thoroughly reviewed to ensure correctness and understanding:
 
-- **Code generation** — creating the initial HTML structure and CSS design system
-- **Debugging** — Identifying CSS layout issues for responsive breakpoints
-- **Documentation** — Generating structured README and technical documentation
-- **Design suggestions** — Refining color palette and micro-animation choices
+- **Code Assistance** — helped scaffold the initial HTML structure and CSS design system, which I verified and customized
+- **Debugging Support** — assisted in identifying CSS layout issues for responsive breakpoints
+- **Documentation Help** — assisted in structuring the README and technical documentation (all content carefully reviewed)
+- **Design Suggestions** — provided suggestions for the color palette and micro-animation choices
 
 > For a detailed breakdown, see [`docs/ai-usage-report.md`](docs/ai-usage-report.md).
 
