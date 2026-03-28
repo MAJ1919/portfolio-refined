@@ -9,6 +9,7 @@
 - **SVG Mockup Graphics**: Used AI to help create the SVG visuals for the project cards (URL Shortener & Email Tracker), which I refined to better represent each project's UI.
 - **Debugging**: When responsive layout issues appeared on mobile (nav menu positioning, grid column collapse), I described the symptoms and received targeted CSS fixes that I verified and applied.
 - **Documentation**: AI assisted in structuring the README and technical documentation. I reviewed all generated content and modified sections to accurately reflect my work and understanding.
+- **Assignment 2 Interactivity**: Used AI to plan and implement the dynamic Project Search and Filtering functionality, including DOM manipulation logic and CSS states. Also used it to track down and resolve a CSS specificity bug related to the contact form's success message.
 
 ---
 

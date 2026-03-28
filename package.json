@@ -1,0 +1,26 @@
+{
+  "name": "swe363-hw2",
+  "version": "1.0.0",
+  "description": "A responsive, modern personal portfolio web application built with **HTML5**, **CSS3**, and **vanilla JavaScript** as part of SWE363 (Web Engineering) Assignment 1 at KFUPM.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MAJ1919/202271080-MahdiAlHassan-assignment1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/MAJ1919/202271080-MahdiAlHassan-assignment1/issues"
+  },
+  "homepage": "https://github.com/MAJ1919/202271080-MahdiAlHassan-assignment1#readme"
+}

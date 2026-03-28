@@ -135,9 +135,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const isMessageValid = validateField(messageInput, messageError, 'Message');
 
         if (isNameValid && isEmailValid && isMessageValid) {
-            formSuccess.hidden = false;
+            formSuccess.style.display = 'flex';
             contactForm.reset();
-            setTimeout(() => formSuccess.hidden = true, 5000);
+            setTimeout(() => formSuccess.style.display = 'none', 5000);
         }
     });
 
@@ -176,5 +176,50 @@ document.addEventListener('DOMContentLoaded', () => {
             return false;
         });
     });
+
+    // 10. PROJECT SEARCH & FILTER
+    const searchInput = document.getElementById('project-search');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    if (searchInput && filterBtns.length > 0 && projectCards.length > 0) {
+        const filterProjects = () => {
+            const searchTerm = searchInput.value.toLowerCase().trim();
+            const activeFilterBtn = document.querySelector('.filter-btn.active');
+            const activeCategory = activeFilterBtn ? activeFilterBtn.dataset.filter : 'all';
+
+            projectCards.forEach(card => {
+                const titleElement = card.querySelector('.project-card__title');
+                const title = titleElement ? titleElement.textContent.toLowerCase() : '';
+                const categories = card.dataset.category ? card.dataset.category.split(' ') : [];
+
+                const matchesSearch = title.includes(searchTerm);
+                const matchesCategory = activeCategory === 'all' || categories.includes(activeCategory);
+
+                if (matchesSearch && matchesCategory) {
+                    card.classList.remove('project-hidden');
+                    // Retrigger reveal animation if not already visible
+                    if (!card.classList.contains('visible')) {
+                        card.classList.add('visible');
+                    }
+                } else {
+                    card.classList.add('project-hidden');
+                }
+            });
+        };
+
+        searchInput.addEventListener('input', filterProjects);
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to the clicked button
+                btn.classList.add('active');
+                // Trigger filter
+                filterProjects();
+            });
+        });
+    }
 
 });

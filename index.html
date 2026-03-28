@@ -167,9 +167,26 @@
   <section id="projects" class="projects section">
     <div class="container">
       <h2 class="section__title reveal">Featured Projects</h2>
-      <div class="projects__grid">
+      
+      <div class="projects__controls reveal">
+        <div class="projects__search-container">
+          <svg class="projects__search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="project-search" class="form-input projects__search-input" placeholder="Search projects by title...">
+        </div>
+        <div class="projects__filters" id="project-filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="python">Python</button>
+          <button class="filter-btn" data-filter="web">Web Apps</button>
+          <button class="filter-btn" data-filter="analytics">Analytics</button>
+        </div>
+      </div>
+
+      <div class="projects__grid" id="projects-grid">
         <!-- URL Shortener -->
-        <article class="project-card reveal">
+        <article class="project-card reveal" data-category="python web">
           <div class="project-card__image">
             <svg viewBox="0 0 600 340">
               <defs>
@@ -222,7 +239,7 @@
           </div>
         </article>
         <!-- Email Tracker -->
-        <article class="project-card reveal">
+        <article class="project-card reveal" data-category="python web analytics">
           <div class="project-card__image">
             <svg viewBox="0 0 600 340">
               <defs>
@@ -314,7 +331,7 @@
             <polygon points="22 2 15 22 11 13 2 9 22 2" />
           </svg>
         </button>
-        <div id="form-success" class="form-success" hidden>
+        <div id="form-success" class="form-success" style="display: none;">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
             <polyline points="22 4 12 14.01 9 11.01" />

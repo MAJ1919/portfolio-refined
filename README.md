@@ -1,6 +1,6 @@
 # Mahdi's Portfolio Website
 
-A responsive, modern personal portfolio web application built with **HTML5**, **CSS3**, and **vanilla JavaScript** as part of SWE363 (Web Engineering) Assignment 1 at KFUPM.
+A responsive, modern personal portfolio web application built with **HTML5**, **CSS3**, and **vanilla JavaScript** as part of SWE363 (Web Engineering) Assignment 2 at KFUPM.
 
 ![Portfolio Preview](assets/images/preview.png)
 
@@ -16,6 +16,7 @@ A responsive, modern personal portfolio web application built with **HTML5**, **
 - **Contact Form Validation** — Client-side validation with real-time error feedback
 - **Floating Particles** — Dynamic animated particles in the hero section
 - **Active Nav Highlighting** — Automatically highlights the current section in the navbar
+- **Dynamic Project Filtering** — Search projects by title and filter by tags (Python, Web Apps, Analytics)
 
 ---
 
@@ -50,8 +51,8 @@ SWE363 HW1/
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/id-name-assignment1.git
-   cd id-name-assignment1
+   git clone https://github.com/YOUR_USERNAME/id-name-assignment2.git
+   cd id-name-assignment2
    ```
 
 2. **Open in browser:**
@@ -81,9 +82,9 @@ SWE363 HW1/
 
 ## 🤖 AI Usage Summary
 
-AI-assisted development tools (Claude/Cursor) were used during this project for:
+AI-assisted development tools (Claude/antigravity) were used during this project for:
 
-- **Code generation** — Scaffolding the initial HTML structure and CSS design system
+- **Code generation** — creating the initial HTML structure and CSS design system
 - **Debugging** — Identifying CSS layout issues for responsive breakpoints
 - **Documentation** — Generating structured README and technical documentation
 - **Design suggestions** — Refining color palette and micro-animation choices
@@ -99,8 +100,4 @@ AI-assisted development tools (Claude/Cursor) were used during this project for:
 - **JavaScript (ES6+)** — DOM manipulation, Intersection Observer, localStorage
 - **Google Fonts** — Inter typeface
 
----
 
-## 📄 License
-
-This project is submitted as coursework for SWE363 at KFUPM. All rights reserved.

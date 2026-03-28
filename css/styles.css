@@ -710,6 +710,78 @@ h6 {
     gap: var(--spacing-md);
 }
 
+/* --- Project Search & Filter Controls --- */
+.projects__controls {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-2xl);
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .projects__controls {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.projects__search-container {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+}
+
+.projects__search-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--clr-text-muted);
+    pointer-events: none;
+}
+
+.projects__search-input {
+    padding-left: 42px;
+    width: 100%;
+}
+
+.projects__filters {
+    display: flex;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    color: var(--clr-text-secondary);
+    background: transparent;
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.filter-btn:hover {
+    color: var(--clr-primary);
+    border-color: var(--clr-primary);
+    background: rgba(108, 99, 255, 0.05);
+}
+
+.filter-btn.active {
+    background: var(--clr-primary);
+    color: #fff;
+    border-color: var(--clr-primary);
+    box-shadow: var(--shadow-sm);
+}
+
+.project-hidden {
+    display: none !important;
+}
+
 /* ==========================================================
    10. CONTACT SECTION
    ========================================================== */
@@ -778,7 +850,6 @@ h6 {
 
 .form-success {
     grid-column: 1 / -1;
-    display: flex;
     align-items: center;
     gap: var(--spacing-md);
     padding: var(--spacing-lg);

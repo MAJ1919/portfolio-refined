@@ -21,6 +21,7 @@ The main (and only) HTML file containing all page sections. Key design decisions
 - **Semantic elements** — `<header>`, `<section>`, `<article>`, `<footer>`, and `<nav>` for accessibility and SEO.
 - **SVG inline graphics** — Project mockup images are embedded as inline SVGs for crisp rendering at any resolution and zero external HTTP requests.
 - **`data-theme` attribute** on `<html>` — Controls the active color scheme.
+- **`data-category` attribute** on project articles — Enables tag-based filtering.
 - **`novalidate` on the form** — Disables native browser validation so our custom JavaScript validation handles all feedback.
 
 ### `css/styles.css`
@@ -48,6 +49,7 @@ All JavaScript in a single IIFE-style block wrapped in `DOMContentLoaded`. Featu
 | **Form Validation** | `blur` event listeners, regex for email, `submit` prevention |
 | **Particles** | Dynamically created `<div>` elements with CSS animation |
 | **Header Shadow** | `scroll` event listener, `classList.toggle('scrolled')` |
+| **Project Filtering** | `input` & `click` event listeners, logic matching string searches and arrays |
 
 ---
 
