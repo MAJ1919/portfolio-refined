@@ -22,3 +22,7 @@ build/
 # Environment
 .env
 .env.local
+
+# Skills & Agents
+.agents/
+.agent/
