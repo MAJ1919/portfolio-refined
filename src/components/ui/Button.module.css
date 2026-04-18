@@ -1,0 +1,110 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  font-family: var(--font-display);
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  border: 2px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1), background 0.25s ease;
+}
+
+.btn--md {
+  font-size: var(--fs-sm);
+  padding: 14px 28px;
+}
+
+.btn--sm {
+  font-size: var(--fs-xs);
+  padding: 10px 20px;
+}
+
+.btn--lg {
+  font-size: var(--fs-base);
+  padding: 16px 36px;
+}
+
+/* Primary */
+.btn--primary {
+  background: linear-gradient(135deg, var(--clr-primary), var(--clr-primary-dark));
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.3);
+}
+.btn--primary:hover {
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+  color: #fff;
+}
+
+/* Outline */
+.btn--outline {
+  background: transparent;
+  color: var(--clr-primary);
+  border-color: var(--clr-primary);
+}
+.btn--outline:hover {
+  background: var(--clr-primary);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.25);
+}
+
+/* Ghost */
+.btn--ghost {
+  background: transparent;
+  color: var(--clr-text-secondary);
+  border-color: var(--clr-border);
+}
+.btn--ghost:hover {
+  border-color: var(--clr-primary);
+  color: var(--clr-primary);
+}
+
+/* Coming Soon */
+.btn--coming-soon {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+.btn--coming-soon:hover {
+  transform: none;
+  box-shadow: none;
+}
+.btn--coming-soon::after {
+  content: 'Coming Soon';
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) scale(0.9);
+  background: var(--clr-text);
+  color: var(--clr-bg);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.btn--coming-soon:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+/* Full width */
+.btn--full {
+  width: 100%;
+}
+
+.btn--disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.btn__icon {
+  display: flex;
+  align-items: center;
+}

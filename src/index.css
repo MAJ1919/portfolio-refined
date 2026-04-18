@@ -1,0 +1,292 @@
+/* ============================================================
+   PORTFOLIO DESIGN SYSTEM — Mahdi Al Hassan (React v2)
+   ============================================================
+   1. CSS Custom Properties (Design Tokens)
+   2. Reset & Base Styles
+   3. Typography
+   4. Layout Utilities
+   5. Animations & Keyframes
+   6. Reduced Motion
+   ============================================================ */
+
+/* ==========================================================
+   1. CSS CUSTOM PROPERTIES (Design Tokens)
+   ========================================================== */
+:root {
+  /* --- Color Palette — Refined Indigo + Warm Amber --- */
+  --clr-primary: #6366F1;
+  --clr-primary-light: #818CF8;
+  --clr-primary-dark: #4338CA;
+  --clr-primary-glow: rgba(99, 102, 241, 0.15);
+  --clr-accent: #F59E0B;
+  --clr-accent-light: #FBBF24;
+  --clr-accent-warm: #F59E0B;
+
+  /* --- Backgrounds --- */
+  --clr-bg: #FAFAF9;
+  --clr-bg-alt: #F5F5F0;
+  --clr-bg-card: #FFFFFF;
+  --clr-bg-glass: rgba(250, 250, 249, 0.78);
+  --clr-bg-elevated: rgba(255, 255, 255, 0.9);
+
+  /* --- Text --- */
+  --clr-text: #0F172A;
+  --clr-text-secondary: #334155;
+  --clr-text-muted: #64748B;
+
+  /* --- Borders & Misc --- */
+  --clr-border: #E2E8F0;
+  --clr-success: #22C55E;
+  --clr-error: #EF4444;
+
+  /* --- Typography --- */
+  --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.5rem;
+  --fs-2xl: 2rem;
+  --fs-3xl: 2.5rem;
+  --fs-4xl: 3.5rem;
+
+  /* --- Spacing (8px base grid) --- */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+  --spacing-4xl: 6rem;
+  --spacing-5xl: 8rem;
+
+  /* --- Shadows --- */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06), 0 2px 4px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.04);
+  --shadow-glow: 0 0 40px rgba(99, 102, 241, 0.12);
+
+  /* --- Border Radius --- */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* --- Transitions --- */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* --- Layout --- */
+  --max-width: 1140px;
+  --header-height: 72px;
+}
+
+/* ==========================================================
+   DARK THEME
+   ========================================================== */
+[data-theme="dark"] {
+  --clr-bg: #0A0A1A;
+  --clr-bg-alt: #10102A;
+  --clr-bg-card: #181838;
+  --clr-bg-glass: rgba(10, 10, 26, 0.82);
+  --clr-bg-elevated: rgba(24, 24, 56, 0.9);
+  --clr-text: #E8E8F0;
+  --clr-text-secondary: #A0A4B8;
+  --clr-text-muted: #6B7280;
+  --clr-border: #2D2D5E;
+  --clr-primary-glow: rgba(99, 102, 241, 0.25);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.45);
+  --shadow-glow: 0 0 40px rgba(99, 102, 241, 0.2);
+}
+
+/* ==========================================================
+   2. RESET & BASE STYLES
+   ========================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  color: var(--clr-text);
+  background-color: var(--clr-bg);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.4s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--clr-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--clr-primary-light);
+}
+
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Focus ring for accessibility */
+:focus-visible {
+  outline: 2px solid var(--clr-primary);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* ==========================================================
+   3. TYPOGRAPHY
+   ========================================================== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--clr-text);
+}
+
+/* ==========================================================
+   4. LAYOUT UTILITIES
+   ========================================================== */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-xl);
+}
+
+.section {
+  padding: var(--spacing-5xl) 0;
+}
+
+/* ==========================================================
+   5. ANIMATIONS & KEYFRAMES
+   ========================================================== */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float-particle {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% { opacity: 0.06; }
+  90% { opacity: 0.06; }
+  100% {
+    transform: translateY(-10vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.12;
+  }
+  50% {
+    transform: scale(1.04);
+    opacity: 0.2;
+  }
+}
+
+@keyframes scrollPulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scaleY(0.6);
+  }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* ==========================================================
+   6. REDUCED MOTION
+   ========================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ==========================================================
+   RESPONSIVE BREAKPOINT OVERRIDES
+   ========================================================== */
+@media (max-width: 1024px) {
+  :root {
+    --fs-4xl: 2.75rem;
+    --fs-3xl: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --fs-4xl: 2.25rem;
+    --fs-3xl: 1.75rem;
+    --fs-2xl: 1.5rem;
+    --header-height: 64px;
+    --spacing-5xl: 5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --fs-4xl: 1.85rem;
+    --fs-3xl: 1.5rem;
+  }
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+  .section {
+    padding: var(--spacing-3xl) 0;
+  }
+}

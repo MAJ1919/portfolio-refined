@@ -1,0 +1,26 @@
+export const projects = [
+  {
+    id: 'url-shortener',
+    title: 'URL Shortener & Hop Tracker',
+    problem: 'Long URLs are hard to share and offer zero visibility into click behavior or redirect chains.',
+    approach: 'Built a full-stack URL shortener with FastAPI, Redis for sub-millisecond caching, and a Streamlit dashboard for real-time analytics.',
+    learned: 'Cache invalidation strategies, high-throughput redirect handling, and analytics pipeline design.',
+    tags: ['Python', 'FastAPI', 'Redis', 'Streamlit'],
+    category: 'python web',
+    github: null,
+    demo: null,
+    gradient: ['#6366F1', '#818CF8'],
+  },
+  {
+    id: 'email-tracker',
+    title: 'Email Tracker',
+    problem: "Email campaigns lack visibility — you send emails but can't tell who opened them, when, or how they engaged.",
+    approach: 'Built a tracking system with Flask and PostgreSQL that monitors opens, clicks, and bounces using tracking pixels and redirect links.',
+    learned: 'Working with HTTP headers for tracking, building analytics dashboards from raw event data, and database optimization for time-series queries.',
+    tags: ['Python', 'Flask', 'PostgreSQL', 'Analytics'],
+    category: 'python web analytics',
+    github: null,
+    demo: null,
+    gradient: ['#F59E0B', '#EF4444'],
+  },
+];

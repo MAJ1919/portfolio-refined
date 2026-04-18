@@ -1,0 +1,31 @@
+.wrapper {
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.title {
+  font-size: var(--fs-3xl);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  position: relative;
+  display: inline-block;
+}
+
+.title::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: linear-gradient(135deg, var(--clr-primary), var(--clr-accent));
+  border-radius: var(--radius-full);
+  margin: var(--spacing-md) auto var(--spacing-2xl);
+}
+
+.subtitle {
+  font-family: var(--font-body);
+  font-size: var(--fs-md);
+  color: var(--clr-text-secondary);
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.7;
+}

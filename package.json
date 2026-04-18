@@ -1,11 +1,8 @@
 {
-  "name": "swe363-hw2",
-  "version": "1.0.0",
-  "description": "A responsive, modern personal portfolio web application built with **HTML5**, **CSS3**, and **vanilla JavaScript** as part of SWE363 (Web Engineering) Assignment 1 at KFUPM.",
-  "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
+  "name": "mahdi-portfolio",
+  "version": "2.0.0",
+  "description": "Personal portfolio built with React + Vite — Mahdi Al Hassan, Software Engineering student at KFUPM.",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -15,15 +12,15 @@
     "type": "git",
     "url": "git+https://github.com/MAJ1919/202271080-MahdiAlHassan-assignment1.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["portfolio", "react", "vite"],
+  "author": "Mahdi Al Hassan",
   "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/MAJ1919/202271080-MahdiAlHassan-assignment1/issues"
-  },
-  "homepage": "https://github.com/MAJ1919/202271080-MahdiAlHassan-assignment1#readme",
   "dependencies": {
-    "vite": "^8.0.3"
+    "@vitejs/plugin-react": "^4.5.2",
+    "framer-motion": "^12.9.2",
+    "lucide-react": "^0.511.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "vite": "^8.0.8"
   }
 }
